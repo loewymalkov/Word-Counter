@@ -8,16 +8,16 @@ namespace WordCounter
   {
     public static void Main()
     {
-      Console.WriteLine("---------------------------------------------------\nWelcome to the WordCounter Console App. Please enter a sentence followed by a word you wish to count. Do not include punctuation.");
+      Console.WriteLine("---------------------------------------------------\nWelcome to the WordCounter Console App. Please enter a sentence followed by a word you wish to count");
 
       Loop();      
     }
 
     public static void Loop()
     {
-      Console.WriteLine("sentence:");
+      Console.WriteLine("---------\nSentence:");
       string sentence = Console.ReadLine();
-      Console.WriteLine("word");
+      Console.WriteLine("---------\nWord");
       string word = Console.ReadLine();
 
       Counter newWordCounter = new Counter(sentence, word);

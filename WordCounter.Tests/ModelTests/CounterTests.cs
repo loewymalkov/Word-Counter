@@ -44,12 +44,12 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void Counter_CountWords_ReturnNull()
+    public void Counter_CountWords_ReturnNoOccurences()
     {
       Counter newCount = new Counter("for the people by the people", "cat");
       string[] resultArray = newCount.SplitSentence();
       newCount.CountWords(resultArray);
-      Assert.AreEqual(newCount.Count, 0);
+      Assert.AreEqual(newCount.Count, 2);
     }
   }
 }

@@ -18,7 +18,7 @@ namespace WordCounting.Models
 
     public string[] SplitSentence()
     {
-      string[] wordArray = Sentence.Split(' ');
+      string[] wordArray = Sentence.Split(' ', ',', '.', '"', '!', '?');
       return wordArray;
     }
 
