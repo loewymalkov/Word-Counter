@@ -7,7 +7,7 @@ Console based app that can count the occurences of a chosen word in given a sent
 Built for Epicodus' C# Testing independent review. Takes a user inputted sentence and word and counts how many times that word is in the sentence. An example input and output would be:
 - word: cat
 - sentence: this cat is a good cat
-- prints to console the sentence contains the word cat twice. 
+- prints to console that the sentence contains the word cat twice. 
 
 ### SET-UP
 
