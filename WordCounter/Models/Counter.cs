@@ -22,18 +22,15 @@ namespace WordCounting.Models
       return wordArray;
     }
 
-    // public static CountWords(string[] wordArray)
-    // {
-    //   for (int i = 0; i <= wordArray.Length; i++)
-    //   {
-    //     if (wordArray[i] == Counter.Word)
-    //     {
-    //       // add to a count
-    //       Counter.Count += 1;
-    //     }
-    //   }
-    //   // loop through the words in the array and evaluate if they match the chosen word, and make sure it doesn't contain a letter directly after
-    //   // add 1 if the word matches, else move to next word
-    // }
+    public void CountWords(string[] wordArray)
+    {
+      for (int i = 0; i < wordArray.Length; i++)
+      {
+        if (wordArray[i] == this.Word)
+        {
+          this.Count += 1;
+        }
+      }
+    }
   }
 }

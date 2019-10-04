@@ -31,10 +31,25 @@ namespace WordCounter.Tests
       Counter newCount = new Counter("for the people by the people", "people");
       string[] resultArray = newCount.SplitSentence();
       string[] testArray = {"for", "the", "people", "by", "the", "people"};
-      Console.WriteLine(resultArray);
-      Console.WriteLine(testArray);
       Assert.AreEqual(resultArray.ToString(), testArray.ToString());
     }
 
+    [TestMethod]
+    public void Counter_CountWords_OccurencesOfWord()
+    {
+      Counter newCount = new Counter("for the people by the people", "people");
+      string[] resultArray = newCount.SplitSentence();
+      newCount.CountWords(resultArray);
+      Assert.AreEqual(newCount.Count, 2);
+    }
+
+    [TestMethod]
+    public void Counter_CountWords_ReturnNull()
+    {
+      Counter newCount = new Counter("for the people by the people", "cat");
+      string[] resultArray = newCount.SplitSentence();
+      newCount.CountWords(resultArray);
+      Assert.AreEqual(newCount.Count, 0);
+    }
   }
 }
