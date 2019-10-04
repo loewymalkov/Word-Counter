@@ -10,12 +10,17 @@ namespace WordCounter.Tests
     [TestMethod]
     public void Counter_CreateCounter_newCountHasSentence()
     {
-      // Arrange
       Counter newCount = new Counter("for the people by the people", "people");
-      // Act
       string sentence = newCount.Sentence;
-      // Assert
       Assert.AreEqual(sentence, "for the people by the people");
+    }
+
+    [TestMethod]
+    public void Counter_CreateCounter_newCountHasWord()
+    {
+      Counter newCount = new Counter("for the people by the people", "people");
+      string word = newCount.Word;
+      Assert.AreEqual(word, "people");
     }
 
   }
