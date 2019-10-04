@@ -18,12 +18,13 @@ namespace WordCounting.Models
       // WordDictionary;
     }
 
-    // public static string SplitSentence()
-    // {
-    //   string[] wordArray = Counter.SplitSentence.Split();
-    //   // store the split sentence in an array of words
-    //   // call on CountWords(wordArray)
-    // }
+    public static Array SplitSentence()
+    {
+      Array wordArray = new Array[Counter.Sentence.ToSplit()];
+      return wordArray;
+      // store the split sentence in an array of words
+      // call on CountWords(wordArray)
+    }
 
     // public static CountWords(string[] wordArray)
     // {

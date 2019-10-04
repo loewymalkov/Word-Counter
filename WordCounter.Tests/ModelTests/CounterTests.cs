@@ -23,5 +23,14 @@ namespace WordCounter.Tests
       Assert.AreEqual(word, "people");
     }
 
+    [TestMethod]
+    public void Counter_CreateCounter_SplitSentence()
+    {
+      Counter newCount = new Counter("for the people by the people", "people");
+      Array resultArray = new Array[newCount.SplitSentence()];
+      Array testArray = new Array["for", "the", "people", "by", "the", "people"];
+      Assert.AreEqual(resultArray, testArray);
+    }
+
   }
 }
