@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
 using WordCounting.Models;
 
 namespace WordCounter.Tests
@@ -27,9 +29,11 @@ namespace WordCounter.Tests
     public void Counter_CreateCounter_SplitSentence()
     {
       Counter newCount = new Counter("for the people by the people", "people");
-      Array resultArray = new Array[newCount.SplitSentence()];
-      Array testArray = new Array["for", "the", "people", "by", "the", "people"];
-      Assert.AreEqual(resultArray, testArray);
+      string[] resultArray = newCount.SplitSentence();
+      string[] testArray = {"for", "the", "people", "by", "the", "people"};
+      Console.WriteLine(resultArray);
+      Console.WriteLine(testArray);
+      Assert.AreEqual(resultArray.ToString(), testArray.ToString());
     }
 
   }

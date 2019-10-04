@@ -5,7 +5,6 @@ namespace WordCounting.Models
 {
   public class Counter
   {
-    // public Dictionary<string, int> WordDictionary = new Dictionary<string, int>{};
     public string Sentence { get; set; }
     public string Word { get; set; }
     public int Count { get; set; }
@@ -15,15 +14,12 @@ namespace WordCounting.Models
       Sentence = sentence;
       Word = word;
       Count = 0;
-      // WordDictionary;
     }
 
-    public static Array SplitSentence()
+    public string[] SplitSentence()
     {
-      Array wordArray = new Array[Counter.Sentence.ToSplit()];
+      string[] wordArray = Sentence.Split(' ');
       return wordArray;
-      // store the split sentence in an array of words
-      // call on CountWords(wordArray)
     }
 
     // public static CountWords(string[] wordArray)
