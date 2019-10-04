@@ -21,7 +21,6 @@ Built for Epicodus' C# Testing independent review. Takes a user inputted sentenc
 |-|-|-|
 | user can enter a sentence | "for the people by the people" | sentence: for the people by the people |
 | user can enter the word to be counted | "people" | word: people |
-| catch an error if word is not in the sentence | "cat" | Cat is not in the sentence you provided |
 | program will count the occurences of word | _given sentence and word_ | "there are 2 occurences of the word people" |
 
 
