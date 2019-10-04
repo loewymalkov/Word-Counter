@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Counter.Models;
+using WordCounting.Models;
 
 namespace WordCounter.Tests
 {
@@ -8,14 +8,14 @@ namespace WordCounter.Tests
   {
 
     [TestMethod]
-    public void Counter_CreateCount_Input()
+    public void Counter_CreateCounter_newCountHasSentence()
     {
       // Arrange
-      Counter newRectangle = new Rectangle(4, 4);
+      Counter newCount = new Counter("for the people by the people", "people");
       // Act
-      int result = newRectangle.GetArea();
+      string sentence = newCount.Sentence;
       // Assert
-      Assert.AreEqual(result, 16);
+      Assert.AreEqual(sentence, "for the people by the people");
     }
 
   }
